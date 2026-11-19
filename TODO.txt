@@ -1,0 +1,21 @@
+BA Login Monitor - TODO
+======================
+
+## Security Hardening
+- [ ] Disable XML-RPC (common brute force vector)
+- [ ] Block REST API user enumeration (/wp-json/wp/v2/users)
+- [ ] Hide WordPress version from generator meta tag
+
+## Monitoring Improvements
+- [ ] Failed login lockout - block IP after N failed attempts (already logging login_failed with IP)
+- [ ] Email/Telegram alerts on critical events (new country login, failed login spike, role changes)
+- [ ] Track file changes - periodic check on wp-config.php, .htaccess, active plugin files
+
+## Smart Detection (using existing geo-IP data)
+- [ ] New country detection - flag login from country user has never used before
+- [ ] Concurrent session detection - same user logged in from multiple IPs
+
+## UI
+- [ ] Uncomment Activity submenu when dashboard is ready
+- [ ] Uncomment Database Settings when needed
+- [ ] Build external dashboard for central DB (separate project)
